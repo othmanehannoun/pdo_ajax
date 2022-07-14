@@ -1,0 +1,123 @@
+<!-- Add New -->
+<div class="modal" id="add" tabindex="-1">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Modal title</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<form id="addForm">
+			<div class="modal-body">
+				<div class="container-fluid">
+					
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label class="control-label" style="position:relative; top:7px;">Firstname:</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="firstname">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label class="control-label" style="position:relative; top:7px;">Lastname:</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="lastname">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label class="control-label" style="position:relative; top:7px;">Address:</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="address">
+						</div>
+					</div>
+
+				</div> 
+			</div>
+		
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a>
+			</div> 
+
+		</form>
+	  </div>
+	</div>
+</div>
+
+
+<!-- Edit -->
+<div class="modal" id="edit" tabindex="-1">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Modal title</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<form id="editForm">
+			<div class="modal-body">
+				<div class="container-fluid">
+					
+					<input type="hidden" class="id" name="id">
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label class="control-label" style="position:relative; top:7px;">Firstname:</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control firstname" name="firstname">
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label class="control-label" style="position:relative; top:7px;">Lastname:</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control lastname" name="lastname">
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label class="control-label" style="position:relative; top:7px;">Address:</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control address" name="address">
+						</div>
+					</div>
+
+				</div> 
+			</div>
+		
+			<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Update</a>
+            </div>
+
+		</form>
+	  </div>
+	</div>
+</div>
+
+<!-- Delete -->
+<div class="modal" tabindex="-1" id="delete">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Modal title</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">	
+			<p class="text-center">Are you sure you want to Delete</p>
+			<h2 class="text-center fullname"></h2>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+			<button type="button" class="btn btn-danger id"><span class="glyphicon glyphicon-trash"></span> Yes</button>
+		</div>
+	  </div>
+	</div>
+  </div>

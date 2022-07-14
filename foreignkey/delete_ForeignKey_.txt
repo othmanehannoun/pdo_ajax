@@ -1,0 +1,152 @@
+//--------id table 1 = 4 ---------------
+
+ DELETE FROM table4
+        WHERE id_table3 IN(
+          SELECT id FROM table3 WHERE id_table2 IN(
+          SELECT id FROM table2 WHERE id_table1 = 4
+        )
+        ); 
+        
+  DELETE FROM table3 
+        WHERE id_table2 IN(
+          SELECT id FROM table2 WHERE id_table1 = 4
+        ); 
+
+ DELETE FROM `table2` WHERE `id_table1` = 4;
+ DELETE FROM `table1` WHERE `id` = 4;
+
+
+
+
+-------------------------------------------------------------------------------------------
+
+ DELETE FROM coverproposals
+        WHERE id_Cover IN(
+          SELECT id_cover FROM cover WHERE id_product IN(
+          SELECT id_product FROM procuct WHERE id_assurance = 1
+        ))
+        OR 
+        id_Proposals IN(
+          SELECT id FROM proposals WHERE id_Contract IN(
+          SELECT id FROM contracts WHERE product IN (
+              SELECT id_product FROM procuct WHERE id_assurance = 1
+              )
+        ));
+        
+   DELETE FROM proposals
+        WHERE id_Contract IN(
+          SELECT id FROM contracts WHERE product IN (
+          SELECT id_product FROM procuct WHERE id_assurance = 1
+        ));
+        
+   DELETE FROM contracts
+       WHERE product IN (
+         SELECT id_product FROM procuct WHERE id_assurance = 1
+        );
+        
+    DELETE FROM cover
+        WHERE id_product IN(
+          SELECT id_product FROM procuct WHERE id_assurance = 1
+        );
+        
+    DELETE FROM partner_commission
+        WHERE id_product IN(
+            SELECT id_product FROM procuct WHERE id_assurance = 1
+        );
+
+ DELETE FROM procuct WHERE id_assurance = 1;
+ DELETE FROM assurance WHERE id = 1;
+
+
+-------------------------------------------------------------------------------------------
+
+ DELETE FROM coverproposals
+        WHERE id_Cover IN(
+          SELECT id_cover FROM cover WHERE id_product IN(
+          SELECT id_product FROM procuct WHERE id_assurance = 4
+        ))
+        OR 
+        id_Proposals IN(
+          SELECT id FROM proposals WHERE id_Contract IN(
+          SELECT id FROM contracts WHERE product IN (
+              SELECT id_product FROM procuct WHERE id_assurance = 4
+              )
+        ));
+        
+   DELETE FROM proposals
+        WHERE id_Contract IN(
+          SELECT id FROM contracts WHERE product IN (
+          SELECT id_product FROM procuct WHERE id_assurance = 4
+        ));
+        
+    DELETE FROM cover
+        WHERE id_product IN(
+          SELECT id_product FROM procuct WHERE id_assurance = 4
+        );
+        
+    DELETE FROM partner_commission
+        WHERE id_product IN(
+            SELECT id_product FROM procuct WHERE id_assurance = 4
+        );
+
+ DELETE FROM contracts WHERE partner = 4;
+ DELETE FROM procuct WHERE id_assurance = 4;
+ DELETE FROM assurance WHERE id = 4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
